@@ -42,16 +42,3 @@ This project combines both front-end and back-end development to deliver an inte
 - **Database Management**: A MySQL database was implemented to handle appointment and service data.  
 - **Development Tools**: All code was collaboratively developed and version-controlled using Git and GitHub.  
 
----
-
-## Objective & Learning Outcomes
-
-The aim of this project is to apply web development techniques learned in class to create a practical and professional website. It highlights the team's ability to develop both front-end and back-end systems while collaborating effectively on a shared vision. This project showcases the technical and creative skills of the team, as well as their ability to manage resources and meet deadlines.
-
----
-
-## How to Run the Project
-
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-username/spa-booking-website.git
