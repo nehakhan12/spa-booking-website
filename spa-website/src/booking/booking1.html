@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your Serenity Spa experience today and discover luxurious treatments to relax and rejuvenate in our spa village.">
+    <title>Book Your Serenity Spa Experience</title>
+    <link rel="stylesheet" href="booking1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<!-- Header Section -->
+<div class="header">
+    <div class="header_container">
+        <div class="logo">
+            <img src="../logo4.png" alt="Serenity Spa Logo">
+            <span>SERENITY SPA</span>
+        </div>
+        <nav class="nav-links">
+            <a href="http://localhost:63342/spa-website/spa-website/src/home.html">Home</a>
+            <a href="#">Booking</a>
+        </nav>
+
+    </div>
+
+</div>
+
+
+<!-- Main Content -->
+<div class="main-content">
+    <div class="container">
+        <div class="content">
+            <h1>Book Your Serenity Spa Experience</h1>
+            <p class="description">A reservation is required to visit the spa village. When would you like to come and visit us?</p>
+
+            <!-- Date and Visitors Section -->
+            <form action="booking1.php" method="post">
+                <fieldset>
+                    <legend class="form1">Reservation Details</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Date *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="visitors">Number of visitors (14+) *</label>
+                            <select id="visitors" name="num_visitors" required>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+
+                <!-- Personal Information Section -->
+                <fieldset class="form2">
+                    <legend>Personal Information</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full name *</label>
+                            <input type="text" id="fullName" name="full_name" placeholder="e.g. John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address *</label>
+                            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="819-555-5555" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="postalCode">Postal code *</label>
+                            <input type="text" id="postalCode" name="postal_code" placeholder="e.g. A1A 1A1" required>
+                        </div>
+                    </div>
+                    <!-- Checkbox for Accessibility -->
+                    <div class="form-row">
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="accommodation-checkbox" name="accommodation-checkbox">
+                            <label for="accommodation-checkbox">I may require accommodations</label>
+                        </div>
+                    </div>
+
+
+                    <!-- Textarea for Accommodations -->
+                    <div id="accommodation-input" style="display:none;">
+                        <label for="accommodation">Please enter accommodations needed:</label>
+                        <textarea id="accommodation" name="accommodation" rows="4" cols="50"></textarea>
+                    </div>
+
+
+                </fieldset>
+
+
+                <button type="submit">Next</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <p>Serenity Spa offers a wide range of luxurious treatments designed to help you relax and rejuvenate. Visit us to discover your inner peace.</p>
+        </div>
+
+
+        <!-- Contact Section -->
+        <div class="footer-section contact-section">
+            <h4>Contact Us</h4>
+            <p>Email: <a href="mailto:info@serenityspa.com">info@serenityspa.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+            <p>Location: 123 Bliss Avenue, Relax City</p>
+        </div>
+
+
+        <!-- Social Media Section -->
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul class="social-media">
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>© 2024 Serenity Spa. All Rights Reserved. Designed by Group22</p>
+    </div>
+</footer>
+
+
+<script src="booking1.js"></script>
+<script>
+
+
+    // Show or hide accommodations textarea based on checkbox state
+    document.addEventListener("DOMContentLoaded", function () {
+        const accommodationCheckbox = document.getElementById("accommodation-checkbox");
+        const accommodationInput = document.getElementById("accommodation-input");
+
+
+        accommodationCheckbox.addEventListener("change", function () {
+            if (accommodationCheckbox.checked) {
+                accommodationInput.style.display = "block";
+            } else {
+                accommodationInput.style.display = "none";
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>
+

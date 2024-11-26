@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity Spa - Massages</title>
+    <link rel="stylesheet" href="massages.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- Header Placeholder -->
+<div id="header-placeholder"></div>
+
+
+<!-- Parallax Section for Massages Title -->
+<section class="parallax-massages">
+    <div class="content-box">
+        <h2>Massages</h2>
+        <blockquote>View our massage services below and unwind with us!</blockquote>
+    </div>
+</section>
+
+
+<!-- Main Content -->
+<section class="services-section">
+    <div class="service-grid">
+        <!-- Aroma Massage -->
+        <div class="service-card">
+            <img src="https://talkofthetownhairspa.com/wp-content/uploads/2019/07/aromaheroy.jpg" alt="Aroma Massage">
+            <h2>Aroma Massage</h2>
+            <p>$60</p>
+            <p>Thirty minutes</p>
+            <div class="service-description">
+                A relaxing massage using aromatic oils to ease stress and improve overall mood.
+            </div>
+        </div>
+
+
+        <!-- Full Body Massage -->
+        <div class="service-card">
+            <img src="https://yukienatori-newyork.com/wp-content/uploads/2023/01/brown-towels-with-bamboo-candles-relax-spa-massage-1.jpg" alt="Full Body Massage">
+            <h2>Full Body Massage</h2>
+            <p>$120</p>
+            <p>Sixty minutes</p>
+            <div class="service-description">
+                A massage designed to target every muscle group for total relaxation.
+            </div>
+        </div>
+
+
+        <!-- Hot Stone Massage -->
+        <div class="service-card">
+            <img src="https://nexushealthclinic.com/community/wp-content/uploads/2020/05/Hot-Stone-title-Pic-scaled.jpg" alt="Hot Stone Massage">
+            <h2>Hot Stone Massage</h2>
+            <p>$80</p>
+            <p>Sixty minutes</p>
+            <div class="service-description">
+                A therapeutic massage that uses heated stones to release deep muscle tension.
+            </div>
+        </div>
+    </div>
+</section>
+<section class="client-spotlight">
+    <h2>Client Spotlight</h2>
+    <div class="collage">
+        <div class="collage-item"><img src="https://willowurbanretreat.com.au/wp-content/uploads/2024/08/what-to-wear-to-a-spa-day.webp" alt="Spa View"></div>
+        <div class="collage-item"><img src="image2.jpg" alt="Spa Interior"></div>
+        <div class="collage-item"><img src="https://amomentspeace.com/wp-content/uploads/2019/03/girls-night-out-1080x675.gif" alt="Outdoor Pool"></div>
+        <div class="collage-item"><img src="https://www.shutterstock.com/shutterstock/videos/1108000151/thumb/1.jpg?ip=x480" alt="Hot Beverages"></div>
+        <div class="collage-item"><img src="https://images.squarespace-cdn.com/content/v1/6447eeb38baf0c31deed937f/1701797957574-TYXW3NVHA9Y9ZBQ2PEWR/360_F_297163884_LPtaa8dF0MOVQ3469rgVQr8nMfR4ZtPk.jpg" alt="Relaxation Area"></div>
+    </div>
+</section>
+
+
+
+
+<!-- Footer Placeholder -->
+<div id="footer-placeholder"></div>
+
+
+<script>
+    // Load Header
+    fetch('./header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+
+    // Load Footer
+    fetch('./footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+</script>
+
+
+</body>
+</html>
+

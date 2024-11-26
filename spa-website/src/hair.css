@@ -1,0 +1,398 @@
+/* Reset Body and HTML Margin and Padding */
+body, html {
+margin: 0;
+padding: 0;
+overflow-x: hidden; /* Prevent horizontal scroll */
+}
+/* Parallax Section for Massages */
+.parallax-hair {
+ background-image: url('https://img.freepik.com/premium-photo/beautiful-spa-composition-brown-background-natural-skincare-cosmetic-products-ai-generated_128711-6706.jpg'); /* Replace with your preferred background image */
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ height: 40vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: #3b4c35;
+ padding: 0;
+}
+
+
+
+
+
+
+
+
+.parallax-hair .content-box {
+ background-color: rgba(255, 255, 255, 0.85);
+ padding: 2rem;
+ max-width: 700px;
+ text-align: center;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+.parallax-hair h2 {
+ font-family: 'Libre Baskerville', serif;
+ font-size: 2.5rem;
+ font-weight: 700;
+ color: #3b4c35;
+}
+
+
+
+
+
+
+
+
+.parallax-hair blockquote {
+font-style: italic;
+font-size: 1.2rem;
+color: #5c635a; /* Slightly lighter green for quotes */
+margin-top: 0.5rem;
+}
+
+
+
+
+
+
+
+
+/* Services Section */
+.services-section {
+ padding: 2rem;
+ background-color: #45372f;
+}
+
+
+
+
+
+
+
+
+.service-grid {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 1.5rem;
+}
+
+
+
+
+
+
+
+
+.service-card {
+ background-color: #e9e0d7; /* Beige card background */
+  text-align: center;
+  padding: 12px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ width: 300px;
+ height: 350px;
+ text-align: center;
+ transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+ position: relative;
+ overflow: hidden;
+}
+
+
+
+
+
+
+
+
+.service-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+ background-color: #3b4c35; /* Dark green hover color */
+ color: #e9e0d7; /* Lighter text color */
+}
+
+
+
+
+
+
+
+
+.service-card img {
+ width: 100%;
+ height: auto;
+ border-bottom: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+
+.service-card h2 {
+ font-family: 'Libre Baskerville', serif;
+ font-size: 1.2rem;
+ color: #3b4c35;
+ margin: 0.5rem 0;
+}
+
+
+
+
+
+
+
+
+.service-card p {
+ font-size: 1rem;
+ margin: 0.5rem 0;
+ color: #3b4c35;
+}
+
+
+
+
+
+
+
+
+.service-card .service-description {
+ display: none;
+ font-size: 0.9rem;
+ color: #e9e0d7;
+ text-align: center;
+ padding: 1rem;
+}
+
+
+
+
+
+
+
+
+.service-card:hover .service-description {
+}
+
+
+
+
+
+
+
+
+.service-card .service-description {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: absolute;
+ bottom: 5%; /* Moved higher on the card */
+ left: 50%;
+ transform: translate(-50%, 0);
+ color: #e9e0d7; /* Lighter text color */
+ font-size: 1rem;
+ padding: 0.5rem 1rem;
+ opacity: 0;
+ transition: opacity 0.3s ease;
+ text-align: center;
+ font-family: 'Libre Baskerville', serif;
+ max-width: 100%;
+}
+
+
+
+
+
+
+
+
+.service-card:hover .service-description {
+ opacity: 1; /* Fully reveal the description on hover */
+}
+
+
+
+
+
+
+
+
+/* Hair Care Tips Section */
+.hair-care-tips {
+  padding: 0;
+  background-color: #fff;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.tips-content {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 300px; /* Maintain compact size */
+  background-color: transparent; /* Ensure there's no extra background */
+}
+
+
+
+
+.text-section {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: transparent; /* Ensure transparency */
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center the content */
+  font-family: 'Libre Baskerville', serif; /* Updated font-family */
+}
+
+
+
+
+.text-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+
+
+.text-section p, .text-section ul {
+  margin-bottom: 10px;
+  text-align: left; /* Ensure text alignment is left */
+}
+
+
+
+
+.image-section {
+  flex: 1;
+  background-color: transparent; /* Ensure transparency */
+  height: 100%;
+  overflow: hidden;
+}
+
+
+
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Hair Care Tips Section */
+.hair-care-tips {
+  padding: 0;
+  background-color: #fff;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.tips-content {
+  display: flex;
+  align-items: center; /* Align items to the center vertically */
+  justify-content: center; /* Center the text block horizontally */
+  gap: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 300px; /* Maintain compact size */
+  background-color: transparent; /* Ensure there's no extra background */
+}
+
+
+
+
+.text-section {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: transparent; /* Ensure transparency */
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the text block vertically */
+  align-items: center; /* Center the text block horizontally */
+  font-family: 'Libre Baskerville', serif; /* Updated font-family */
+}
+
+
+
+
+.text-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: left; /* Ensure text alignment is left */
+}
+.text-section ul li
+{ margin-bottom: 7px; /* Adjusts spacing between bullet points */
+}
+
+
+
+
+.text-section p, .text-section ul {
+  margin-bottom: 10px;
+  text-align: left; /* Ensure text alignment is left */
+}
+
+
+
+
+.image-section {
+  flex: 1;
+  background-color: transparent; /* Ensure transparency */
+  height: 100%;
+  overflow: hidden;
+}
+
+
+
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+/* Responsive Design */
+@media (min-width: 768px) {
+.hair-care-tips .tips-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+
+
+
+
+

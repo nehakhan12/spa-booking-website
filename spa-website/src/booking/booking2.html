@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatment Booking</title>
+  <link rel="stylesheet" href="booking2.css">
+  <link rel="stylesheet" href="../footer.css">
+</head>
+<body>
+<!-- Header Placeholder -->
+<div id="header-placeholder"></div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div class="container">
+    <div class="content">
+      <h1>Add Treatments</h1>
+      <p class="description">Have your pick from a variety of body and face care treatments and enjoy a moment of peace perfectly tailored to your needs.</p>
+
+      <label for="treatment">Treatment</label>
+      <select id="treatment">
+        <option value="" selected disabled hidden>Choose Treatment</option>
+        <option value="hair">Hair Care</option>
+        <option value="facial">Facial Care</option>
+        <option value="massage">Massage Therapy</option>
+        <option value="nails">Nail Care</option>
+      </select>
+
+      <label for="service">Service</label>
+      <select id="service">
+        <option value="" selected disabled hidden>Choose Service</option>
+      </select>
+
+      <p class="time-label">Choose the time that suits you:</p>
+      <div class="time-options">
+        <!-- Time buttons will be dynamically generated here -->
+      </div>
+
+      <p class="price">$ 0.00 CAD</p>
+      <p class="details"></p>
+
+      <br>
+      <br>
+      <p id="note">*Note - At the moment, we only accept in-store payments. </p>
+      <button type="submit" id="book-button" class="book-btn" disabled>Book</button>
+    </div>
+
+    <div class="image">
+      <img src="https://images.pexels.com/photos/4202325/pexels-photo-4202325.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Massage image">
+    </div>
+  </div>
+</div>
+
+<!-- Footer Placeholder -->
+<div id="footer-placeholder"></div>
+
+<script>
+  // Load Header
+  fetch('header2.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+    });
+
+  // Load Footer
+  fetch('../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+<script src="booking2.js"></script>
+</body>
+</html>

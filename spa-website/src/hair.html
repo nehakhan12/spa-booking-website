@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity Spa - Massages</title>
+    <link rel="stylesheet" href="hair.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+<!-- Header Placeholder -->
+<div id="header-placeholder"></div>
+
+
+
+
+<!-- Parallax Section for Hair Title -->
+<section class="parallax-hair">
+    <div class="content-box">
+        <h2>Hair Treatments</h2>
+        <blockquote>View our hair treatment services below!</blockquote>
+    </div>
+</section>
+
+
+
+
+<!-- Main Content -->
+<section class="services-section">
+    <div class="service-grid">
+
+
+        <!-- Hair Spa -->
+        <div class="service-card">
+            <img src="https://images.pexels.com/photos/7428095/pexels-photo-7428095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Hair Spa">
+            <h2>Hair Spa</h2>
+            <p>$60</p>
+            <p>Sixty minutes</p>
+            <div class="service-description">
+                Repairs and hydrates damaged hair.
+            </div>
+        </div>
+
+
+        <!-- Keratin Treatment -->
+        <div class="service-card">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSvBbbyUFlkgy90pugkd9811Z5PsUIrMVwVfzro4cRMUM9g0ZYN" alt="Keratin Treatment">
+            <h2>Keratin Treatment</h2>
+            <p>$70</p>
+            <p>Sixty minutes</p>
+            <div class="service-description">
+                Smooths, strengthens, and reduces frizz.
+            </div>
+        </div>
+
+
+        <!-- Deep Conditioning -->
+        <div class="service-card">
+            <img src="https://media.istockphoto.com/id/1012364510/photo/set-of-hair-care-products.jpg?s=612x612&w=0&k=20&c=C_sHvH0fR7f7BWFLC447rsjQIhLdSy7cmh07SzUEHV8=" alt="Deep Conditioning">
+            <h2>Deep Conditioning</h2>
+            <p>$90</p>
+            <p>Sixty minutes</p>
+            <div class="service-description">
+                Restores moisture and strengthens hair.
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Hair Care Tips Section -->
+<section class="hair-care-tips">
+    <div class="tips-content">
+        <!-- Left container for text content -->
+        <div class="text-section">
+            <h2>Hair Care Tips</h2>
+            <p>Keep your hair healthy and shiny with these tips:</p>
+            <ul>
+                <li>Use sulfate-free shampoos to prevent dryness.</li>
+                <li>Deep condition your hair once a week for hydration.</li>
+                <li>Protect your hair from heat damage by using a heat protectant spray.</li>
+                <li>Trim split ends regularly to maintain healthy growth.</li>
+                <li>Massage your scalp to stimulate blood circulation and promote growth.</li>
+            </ul>
+        </div>
+
+
+
+
+        <!-- Right container for the image -->
+        <div class="image-section">
+            <img src="https://img.freepik.com/premium-photo/beauty-products-tools-arranged-stylishly-textured-surface-with-green-foliage-showcasing-charcoal-mask-wooden-brushes_93675-253802.jpg" alt="Hair Care" />
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Placeholder for footer -->
+<div id="footer-placeholder"></div>
+
+
+
+
+<!-- JavaScript to Load Header and Footer -->
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+
+
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+

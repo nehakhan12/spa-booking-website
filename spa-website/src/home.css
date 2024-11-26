@@ -1,0 +1,201 @@
+/* Reset Body and HTML Margin and Padding */
+body, html {
+ margin: 0;
+ padding: 0;
+ overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+/* Parallax Section */
+.parallax {
+ background-image: url('https://static.booksy.com/static/live/covers/day_spa.jpg');
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ height: 90vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: #3b4c35;
+ padding: 0rem;
+}
+
+
+.content-box {
+ background-color: rgba(255, 255, 255, 0.85);
+ padding: 2rem;
+ max-width: 700px;
+ width: 100%;
+ text-align: center;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Quote Style */
+.content-box blockquote {
+ font-size: 1.2rem;
+ font-weight: 400;
+ color: #5c635a;
+ font-style: italic;
+ margin-bottom: 1rem;
+}
+
+
+/* Title Styling */
+.content-box h2 {
+ font-family: 'Libre Baskerville', serif;
+ font-size: 2rem;
+ font-weight: 700;
+ color: #3b4c35;
+ margin: 0.5rem 0;
+}
+
+
+/* Info Boxes Styling */
+.info-boxes {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 1rem;
+}
+
+
+.info-box {
+ background-color: #a9b8ae;
+ color: #3b4c35;
+ padding: 1rem;
+ text-align: center;
+ width: 45%;
+ border-radius: 0px;
+}
+
+
+.info-box h3 {
+ font-size: 1rem;
+ font-weight: 400;
+ margin-bottom: 0.5rem;
+}
+
+
+.info-box p {
+ font-size: 0.9rem;
+ font-weight: 200;
+}
+
+
+/* Promotion Banner */
+.promo {
+ background-color: #5c635a;
+ color: #e9e0d7;
+ padding: 0.5rem;
+ margin-top: 1rem;
+ font-size: 1rem;
+ font-weight: 400;
+}
+
+
+.promo-link {
+ color: #3b4c35;
+ font-weight: 700;
+ text-decoration: none;
+ transition: all 0.3s ease;
+}
+
+
+.promo-link:hover {
+ color: #8b9a5b;
+ font-weight: 900;
+ text-decoration: underline;
+}
+/* Our Story Section */
+.our-story {
+ background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpdeaZTTzMdSHY9-QlW67FEup720f5jqkzO4EELgVgDAw7GYQK');
+ background-position: center;
+ background-size: cover;
+ padding: 1rem 2rem;
+ text-align: center;
+}
+
+
+.our-story h2 {
+ font-family: 'Libre Baskerville', serif;
+ font-size: 2rem;
+ font-weight: 700;
+ color: #e9e0d7; /* Light beige for high contrast */
+ margin-bottom: 1.5rem;
+}
+
+
+.our-story p {
+ font-family: 'Libre Baskerville', serif;
+ font-size: 1rem;
+ font-weight: 400;
+ color: #e9e0d7; /* Matches title for consistency */
+ line-height: 1.8;
+ max-width: 700px;
+ margin: 0 auto;
+ background-color: rgba(255, 255, 255, 0.1); /* Subtle light overlay */
+ padding: 1rem;
+ border-radius: 0px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth */
+}
+
+
+/* Reviews Section */
+.reviews {
+ padding: 4rem 2rem;
+ background-color: #f9f9f9;
+ background-image: url('https://dbdzm869oupei.cloudfront.net/img/photomural/preview/23665.png');
+ background-position: center;
+ background-size: cover;
+ text-align: center;
+}
+
+
+.reviews h2 {
+ font-family: 'Libre Baskerville', serif;
+ font-size: 2rem;
+ color: #4c5d4d;
+ margin-bottom: 1.5rem;
+}
+
+
+.slideshow {
+ position: relative;
+ max-width: 600px;
+ margin: 0 auto;
+ overflow: hidden;
+}
+
+
+.review {
+ font-family: 'Libre Baskerville', serif;
+ font-size: 1.2rem;
+ color: #3b4c35;
+ text-align: center;
+ padding: 1rem;
+ display: none;
+}
+
+
+.review span {
+ font-size: 1.5rem;
+ color: #f4c430;
+}
+
+
+.review.active {
+ display: block;
+ animation: fadeIn 0.5s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+ from {
+   opacity: 0;
+ }
+ to {
+   opacity: 1;
+ }
+}
+

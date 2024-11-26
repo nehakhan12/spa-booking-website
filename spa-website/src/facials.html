@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facials - Serenity Spa</title>
+    <link rel="stylesheet" href="facials.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- Header Placeholder -->
+<div id="header-placeholder"></div>
+
+
+<!-- Parallax Section for Facials Title -->
+<section class="parallax-facials">
+    <div class="content-box">
+        <h2>Facials</h2>
+        <blockquote>View our facial services below, a treat for your skin!</blockquote>
+    </div>
+</section>
+
+
+<!-- Facials Service Cards Section -->
+<section class="services-section">
+    <div class="service-grid">
+        <div class="service-card">
+            <img src="https://www.ravalmd.com/hs-fs/hubfs/AdobeStock_276306017%20(1).jpeg?width=6570&height=4380&name=AdobeStock_276306017%20(1).jpeg" alt="Glow Facial">
+            <h2>Glow Facial</h2>
+            <p>$85</p>
+            <p>Sixty minutes</p>
+            <div class="service-description">
+                A rejuvenating facial to leave your skin glowing.
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="https://wilsonaestheticsaz.com/storage/2021/10/different-kinds-of-facial-treatments-you-must-know-az-wilson-aesthetics.jpg" alt="Hydration Boost">
+            <h2>Hydration Boost</h2>
+            <p>$100</p>
+            <p>Sixty minutes</p>
+            <div class="service-description">
+                A rich moisturizing treatment for lasting hydration.
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="https://formmdaesthetics.com/wp-content/uploads/2022/08/Mature-woman-with-glowing-skin-after-anti-aging-facial-1024x683.jpg" alt="Anti-Aging Facial">
+            <h2>Anti-Aging Facial</h2>
+            <p>$120</p>
+            <p>Seventy-five minutes</p>
+            <div class="service-description">
+                Firming ingredients to reduce fine lines and wrinkles.
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Slideshow for Skin Types -->
+<section class="slideshow-section">
+    <h2 class="learn-your-skin-type-title">Learn Your Skin Type!</h2>
+    <div class="slideshow-container">
+        <!-- Slide 1: Dry Skin -->
+        <div class="slide active">
+            <img src="https://mkaesthetic.ae/wp-content/uploads/2023/09/top-view-salts-cream-container1.jpg" alt="Dry Skin">
+            <div class="slide-text">
+                <h3>Dry Skin</h3>
+                <p>Feels tight or rough, often flaky. Needs rich moisturizers and gentle cleansers.</p>
+            </div>
+        </div>
+        <!-- Slide 2: Combination Skin -->
+        <div class="slide">
+            <img src="https://cdn.shopify.com/s/files/1/0012/1657/7656/files/acne-prone-skin-types-organic-skin-care-organic-skin-care-fruit-oils-coconut-oil-fair-trade-organic-skin-care-products-organic-skin-care-products-skin-care-skin-care-natural-organic-f.jpg?v=1674141540" alt="Combination Skin">
+            <div class="slide-text">
+                <h3>Combination Skin</h3>
+                <p>Oily T-zone, dry cheeks. Use balancing products for mixed types.</p>
+            </div>
+        </div>
+        <!-- Slide 3: Oily Skin -->
+        <div class="slide">
+            <img src="https://www.naturopathy-uk.com/wp-content/uploads/2021/10/make-your-own-natural-skincare.jpeg.webp" alt="Oily Skin">
+            <div class="slide-text">
+                <h3>Oily Skin</h3>
+                <p>Shiny with enlarged pores, prone to breakouts. Opt for mattifying, oil-free products.</p>
+            </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    <!-- Pause/Play Button -->
+    <div class="pause-btn-container">
+        <button id="pause-btn" onclick="togglePause()">Pause</button>
+    </div>
+    <p class="conclusion">Understanding your skin type ensures you pick products and services that work best for you.</p>
+    <p class="conclusion">You can pause to read!</p>
+</section>
+
+
+<!-- Footer Placeholder -->
+<div id="footer-placeholder"></div>
+
+
+<script src="facials.js"></script>
+<script>
+    // Load Header
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+
+    // Load Footer
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+ let currentSlide = 0;
+ const slides = document.querySelectorAll(".slide");
+ const totalSlides = slides.length;
+ const slideIntervalTime = 2000; // Time for auto slide change
+ let slideInterval;
+ let isPaused = false;
+
+
+ // Function to change the slide
+ function changeSlide(direction) {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    slides[currentSlide].classList.add("active");
+ }
+
+
+ // Automatic slide change every 5 seconds
+ function startSlideshow() {
+    slideInterval = setInterval(() => {
+        if (!isPaused) {
+            changeSlide(1); // Move to the next slide
+        }
+    }, slideIntervalTime);
+ }
+
+
+ // Pause/Play functionality
+ function togglePause() {
+    if (isPaused) {
+        // Resume the slideshow
+        startSlideshow();
+        document.getElementById("pause-btn").textContent = "Pause";
+    } else {
+        // Pause the slideshow
+        clearInterval(slideInterval);
+        document.getElementById("pause-btn").textContent = "Continue";
+    }
+    isPaused = !isPaused; // Toggle the state
+ }
+
+
+ // Initialize the slideshow
+ startSlideshow();
+
+
+ // Event listeners for manual slide change with buttons
+ document.querySelector(".prev").addEventListener("click", () => changeSlide(-1));
+ document.querySelector(".next").addEventListener("click", () => changeSlide(1));
+
+
+
+
+</script>
+
+
+</body>
+</html>

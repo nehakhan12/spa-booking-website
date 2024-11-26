@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serenity Spa</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+
+<!-- Top Section -->
+<section class="parallax">
+  <div class="content-box">
+    <blockquote>"Relax. Refresh. Renew."</blockquote>
+    <h2>Serenity Spa</h2>
+    <div class="info-boxes">
+      <div class="info-box">
+        <h3>Hours</h3>
+        <p>Monday - Friday: 10 AM - 7 PM<br>Saturday & Sunday: 9 AM - 6 PM</p>
+      </div>
+      <div class="info-box">
+        <h3>Location</h3>
+        <p>22 Serenity St, Spa City, ON 12345</p>
+      </div>
+    </div>
+    <a href="facials.html" class="promo-link">
+      <div class="promo">FACIALS CURRENTLY 20% OFF</div>
+    </a>
+  </div>
+</section>
+
+
+<!-- Our Story Section -->
+<section class="our-story">
+  <h2>Our Story</h2>
+  <p>Serenity Spa was founded by four friends in search of the perfect place to unwind and recharge. Inspired by our shared need for relaxation, we created a peaceful sanctuary where women can escape the stresses of everyday life, find balance, and embrace true well-being.</p>
+</section>
+
+
+<!-- Google Reviews Section -->
+<section class="reviews">
+  <h2>What Our Clients Say</h2>
+  <div class="slideshow">
+    <div class="review active">
+      <p>"Such a serene and comfortable environment. I felt completely at ease. Highly recommend Serenity Spa!"</p>
+      <span>★★★★★</span>
+    </div>
+    <div class="review">
+      <p>"Amazing experience! The staff was so kind and welcoming, and the treatments were incredible."</p>
+      <span>★★★★★</span>
+    </div>
+    <div class="review">
+      <p>"The perfect escape from daily life. Everything from the ambiance to the services was top-notch."</p>
+      <span>★★★★★</span>
+    </div>
+  </div>
+</section>
+
+
+<div id="footer-placeholder"></div>
+
+
+<script>
+  // Load Header
+  fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+      });
+
+
+  // Load Footer
+  fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+      });
+
+
+  // JavaScript for Slideshow
+  let reviews = document.querySelectorAll('.review');
+  let currentIndex = 0;
+
+
+  function showNextReview() {
+    reviews[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % reviews.length;
+    reviews[currentIndex].classList.add('active');
+  }
+
+
+  setInterval(showNextReview, 5000); // Change review every 5 seconds
+
+
+  // Intersection Observer for Our Story Fade-in
+  document.addEventListener("DOMContentLoaded", () => {
+    const ourStorySection = document.querySelector('.our-story');
+
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible'); // Add the "visible" class
+          observer.unobserve(entry.target); // Stop observing after it becomes visible
+        }
+      });
+    }, {
+      threshold: 0.2 // Trigger when 20% of the section is visible
+    });
+
+
+    ourStorySection.classList.add('hidden'); // Start with the "hidden" class
+    observer.observe(ourStorySection); // Observe the "Our Story" section
+  });
+</script>
+</body>
+</html>
+

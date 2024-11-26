@@ -1,0 +1,300 @@
+/* General Styles */
+body {
+   font-family: 'Libre Baskerville', serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f3e7e2;
+   color: #2d2d2d;
+}
+
+
+/* Header Styles */
+.header {
+   display: flex;
+   align-items: center;
+   background-color: #5c635a;
+   padding: 15px 25px; /* Reduced padding */
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.header-container {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   max-width: 1000px; /* Reduced max-width */
+   margin: 0 auto;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px; /* Smaller font size */
+  color: #f5eacf;
+}
+
+
+.logo img {
+  height: 30px; /* Reduced logo size */
+  margin-right: 8px; /* Reduced margin */
+}
+
+
+.nav-links {
+   display: flex;
+   gap: 15px; /* Reduced gap */
+}
+
+
+.nav-links a {
+   color: #f5eacf;
+   text-decoration: none;
+   font-size: 14px; /* Smaller font size */
+}
+
+
+/* Main Content Styles */
+.main-content {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   padding-top: 80px; /* Reduced padding-top */
+   background-image: url('https://images.pexels.com/photos/7233925/pexels-photo-7233925.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   padding-bottom: 40px; /* Adjusted bottom padding */
+}
+
+
+/* Container adjustment */
+.container {
+   width: 70%; /* Narrowed container width */
+   max-width: 700px; /* Further reduced max-width */
+   background-color: rgba(92, 99, 90, 0.85);
+   padding: 15px; /* Reduced padding */
+   border-radius: 8px;
+   color: white;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   margin-top: 20px;  /* Reduced top margin */
+   height: auto; /* Makes container's height adjust based on content */
+}
+
+
+h1 {
+   font-size: 1.8rem; /* Reduced font size */
+   margin-bottom: 10px; /* Reduced margin */
+   text-align: center;
+}
+
+
+.description {
+   font-size: 0.8rem; /* Smaller description text */
+   margin-bottom: 20px; /* Reduced margin */
+   text-align: center;
+   line-height: 1.5;
+}
+
+
+label {
+   display: block;
+   font-size: 0.9rem; /* Smaller label text */
+   margin: 8px 0 4px; /* Reduced margins */
+}
+
+
+input, select {
+   width: 100%;
+   max-width: 300px; /* Reduced max-width */
+   padding: 8px; /* Reduced padding */
+   margin-bottom: 12px; /* Reduced margin */
+   font-size: 0.9rem; /* Smaller font size */
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   background-color: #fefefe;
+}
+
+
+.form-group input, .form-group select {
+   margin-top: 4px; /* Reduced margin */
+}
+
+
+.form1 {
+   margin-top: 15px; /* Reduced margin */
+   margin-bottom: 15px; /* Reduced margin */
+}
+
+
+.form2 {
+   margin-bottom: 15px; /* Reduced margin */
+   margin-top: 15px; /* Reduced margin */
+}
+
+
+/* Form layout styles */
+.form-row {
+   display: flex;
+   justify-content: space-between;
+   gap: 15px; /* Reduced gap */
+   margin-bottom: 12px; /* Reduced margin */
+}
+
+
+.form-group {
+   flex: 1;
+}
+
+
+button {
+   display: block;
+   width: 100%;
+   padding: 10px; /* Reduced padding */
+   background-color: #3c3630;
+   color: #e5dace;
+   font-size: 1rem; /* Smaller font size */
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+   background-color: #5c5350;
+}
+
+
+/* Accessibility checkbox and label */
+.checkbox-group {
+   display: flex;
+   align-items: center;
+   gap: 8px; /* Reduced gap */
+}
+
+
+input[type="checkbox"] {
+   width: 18px; /* Smaller checkbox */
+   height: 18px; /* Smaller checkbox */
+   margin-top: 0;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .container {
+       width: 95%;
+   }
+
+
+   h1 {
+       font-size: 1.6rem; /* Slightly smaller heading */
+   }
+
+
+   .description {
+       font-size: 0.85rem; /* Smaller description text */
+   }
+
+
+   .form-row {
+       flex-direction: column;
+       gap: 8px; /* Smaller gap */
+   }
+
+
+   input, select {
+       max-width: 100%;
+   }
+}
+
+
+/* General Footer Styling */
+.footer {
+  background-color: #5c635a;
+  color: #f5eacf;
+  padding: 20px 0; /* Reduced padding */
+  font-size: 13px; /* Smaller font size */
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1000px; /* Reduced max-width */
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 15px; /* Reduced gap */
+}
+
+
+.footer-section {
+  flex: 1;
+  min-width: 180px; /* Reduced min-width */
+  text-align: left;
+}
+
+
+.contact-section {
+  text-align: left;
+  margin-left: 70px; /* Reduced margin */
+}
+
+
+.footer-section h4 {
+  font-size: 14px; /* Smaller header font */
+  margin-bottom: 8px; /* Reduced margin */
+  color: #e9e0d7;
+}
+
+
+.footer-section p,
+.footer-section a {
+  font-size: 12px; /* Smaller text */
+  line-height: 1.6;
+  color: #f5eacf;
+  text-decoration: none;
+}
+
+
+.footer-section a:hover {
+  color: #e9e0d7;
+  text-decoration: underline;
+}
+
+
+.social-media a {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+/* Bottom Footer Styling */
+.footer-bottom {
+  border-top: 1px solid #e5dace;
+  margin-top: 15px; /* Reduced margin */
+  padding-top: 8px; /* Reduced padding */
+  text-align: center;
+  font-size: 12px; /* Smaller font size */
+  color: #a9b8ae;
+}
+
+
+.footer-bottom a {
+  color: #a9b8ae;
+  text-decoration: none;
+}
+
+
+.footer-bottom a:hover {
+  color: #e9e0d7;
+}
+

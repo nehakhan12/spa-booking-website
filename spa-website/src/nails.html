@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity Spa - Nails</title>
+    <link rel="stylesheet" href="nails.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- Header Placeholder -->
+<div id="header-placeholder"></div>
+
+
+<!-- Parallax Section for Nails -->
+<section class="parallax-nails">
+    <div class="content-box">
+        <h2>Manicures & Pedicures</h2>
+        <blockquote>Indulge in our nail care services for ultimate relaxation.</blockquote>
+    </div>
+</section>
+
+
+<section class="services-section">
+    <div class="slideshow-container">
+        <!-- Service cards -->
+        <div class="service-card">
+            <img src="https://img.freepik.com/free-photo/healthy-beautiful-manicure-flowers_23-2148766557.jpg" alt="Basic Manicure">
+            <h2>Basic Manicure</h2>
+            <p>$30</p>
+            <p>30 minutes</p>
+            <div class="service-description">
+                A classic manicure to clean, shape, and polish your nails for a neat, elegant look.
+            </div>
+        </div>
+
+
+        <div class="service-card">
+            <img src="https://img.freepik.com/premium-photo/hands-spa-manicure-concept_35034-23.jpg" alt="Gel Manicure">
+            <h2>Gel Manicure</h2>
+            <p>$45</p>
+            <p>45 minutes</p>
+            <div class="service-description">
+                A long-lasting gel finish that maintains shine and durability for weeks.
+            </div>
+        </div>
+
+
+        <div class="service-card">
+            <img src="https://img.freepik.com/premium-photo/nail-care-closeup-beautiful-woman-hands-with-natural-nails-beauty-salon_118454-2765.jpg" alt="Deluxe Manicure">
+            <h2>Deluxe Manicure</h2>
+            <p>$60</p>
+            <p>60 minutes</p>
+            <div class="service-description">
+                An indulgent manicure with exfoliation, massage, and luxury treatments.
+            </div>
+        </div>
+
+
+        <div class="service-card">
+            <img src="https://img.freepik.com/free-photo/woman-relaxing-spa_329181-13143.jpg" alt="Basic Pedicure">
+            <h2>Basic Pedicure</h2>
+            <p>$35</p>
+            <p>40 minutes</p>
+            <div class="service-description">
+                A relaxing pedicure for healthy nails and feet, finished with your choice of polish.
+            </div>
+        </div>
+
+
+        <div class="service-card">
+            <img src="https://img.freepik.com/free-photo/beautiful-legs-different-spa-items_144627-28919.jpg" alt="Gel Pedicure">
+            <h2>Gel Pedicure</h2>
+            <p>$50</p>
+            <p>60 minutes</p>
+            <div class="service-description">
+                A pedicure with a durable gel polish finish that lasts and shines.
+            </div>
+        </div>
+
+
+        <div class="service-card">
+            <img src="https://img.freepik.com/free-photo/spa-treatment-product-female-feet-hand-spa_1150-37700.jpg" alt="Deluxe Pedicure">
+            <h2>Deluxe Pedicure</h2>
+            <p>$70</p>
+            <p>75 minutes</p>
+            <div class="service-description">
+                The ultimate pampering pedicure with massage, exfoliation, and luxury polish.
+            </div>
+        </div>
+
+
+
+
+        <!-- Navigation buttons -->
+        <a class="prev" id="prev-btn" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" id="next-btn" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+</section>
+
+
+<section class="client-spotlight">
+    <h2>Nails Spotlight</h2>
+    <div class="collage">
+        <div class="collage-item"><img src="https://cdn.shopify.com/s/files/1/0524/1048/2855/files/Forest_Green_Leaf_-_Custom_Press_On_Nails_480x480.jpg?v=1686825902" alt="Spa View"></div>
+        <div class="collage-item"><img src="https://img.freepik.com/free-photo/woman-accessories-black-top-view_155003-6320.jpg?ga=GA1.1.2017119523.1731086836&semt=ais_hybrid" alt="Spa Interior"></div>
+        <div class="collage-item"><img src="https://nailsforconfidence.com/wp-content/uploads/2024/07/8-fall-nails.jpg" alt="Outdoor Pool"></div>
+        <div class="collage-item"><img src="https://www.instyle.com/thmb/p-bxofrz6K4kiMg1OcmJ2b-Rk1M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/241422670_404647314413312_415253567185843434_n-5cc74d9617c44cec89c740c65eef24da.jpg" alt="Hot Beverages"></div>
+        <div class="collage-item"><img src="https://thepinkissue.com/wp-content/uploads/2024/07/Dark-green-nails-with-abstract-swirls.jpg.webp" alt="Relaxation Area"></div>
+    </div>
+</section>
+
+
+<!-- Footer Placeholder -->
+<div id="footer-placeholder"></div>
+
+
+<script>
+    // Load Header
+      fetch('header.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('header-placeholder').innerHTML = data;
+          });
+
+
+      // Load Footer
+      fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('footer-placeholder').innerHTML = data;
+          });
+
+
+        // Slideshow functionality
+        let currentIndex = 0;
+        const cards = document.querySelectorAll('.service-card');
+        const totalCards = cards.length;
+        const cardsPerPage = 3;
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+
+        // Function to update visibility based on the current index
+        function updateCards() {
+            cards.forEach((card, index) => {
+                if (index >= currentIndex && index < currentIndex + cardsPerPage) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+
+            // Enable/Disable buttons based on current index
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex + cardsPerPage >= totalCards;
+        }
+
+
+        // Button event listeners
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex -= cardsPerPage;
+                updateCards();
+            }
+        });
+
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex + cardsPerPage < totalCards) {
+                currentIndex += cardsPerPage;
+                updateCards();
+            }
+        });
+
+
+        // Initial update
+        updateCards();
+</script>
+
+
+</body>
+</html>
+
+
+
