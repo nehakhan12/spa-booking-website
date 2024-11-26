@@ -1,4 +1,4 @@
-# spa-booking-website
+# Spa Booking Website
 
 ## Project Overview
 
