@@ -1,8 +1,8 @@
 body {
- font-size: 16px; /* Default size for body text */
+ font-size: 16px; 
  margin: 0;
  padding: 0;
- overflow-x: hidden; /* Prevent horizontal scroll */
+ overflow-x: hidden; 
 }
 
 
@@ -42,10 +42,9 @@ body {
 .parallax-facials blockquote {
   font-style: italic;
   font-size: 1.2rem;
-  color: #5c635a; /* Slightly lighter green for quotes */
+  color: #5c635a; 
   margin-top: 0.5rem;
 }
-
 
 /* Slideshow Styling */
 .slideshow-container {
@@ -59,7 +58,6 @@ body {
  overflow: hidden;
 }
 
-
 .slide img {
  width: 100%;
  max-height: 300px;
@@ -68,18 +66,15 @@ body {
  object-position: 50% 60%;
 }
 
-
 .slide {
  display: none;
  position: relative;
  animation: fade 1s ease-in-out;
 }
 
-
 .slide.active {
  display: block;
 }
-
 
 .slide-text {
  position: absolute;
@@ -91,7 +86,6 @@ body {
  padding: 10px 20px;
  border-radius: 5px;
 }
-
 
 .prev, .next {
  cursor: pointer;
@@ -105,21 +99,17 @@ body {
  user-select: none;
 }
 
-
 .prev {
  left: 10px;
 }
-
 
 .next {
  right: 10px;
 }
 
-
 .prev:hover, .next:hover {
  background: rgba(0, 0, 0, 0.8);
 }
-
 
 /* Services Section */
 .services-section {
@@ -127,14 +117,12 @@ body {
    background-color: #413733;
 }
 
-
 .service-grid {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
    gap: 1.5rem;
 }
-
 
 .service-card {
    background-color: #e9e0d7; /* Beige card background */
@@ -149,7 +137,6 @@ body {
    overflow: hidden;
 }
 
-
 .service-card:hover {
    transform: translateY(-5px);
    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -157,13 +144,11 @@ body {
    color: #e9e0d7; /* Lighter text color */
 }
 
-
 .service-card img {
    width: 100%;
    height: auto;
    border-bottom: 1px solid #ddd;
 }
-
 
 .service-card h2 {
    font-family: 'Libre Baskerville', serif;
@@ -172,13 +157,11 @@ body {
    margin: 0.5rem 0;
 }
 
-
 .service-card p {
    font-size: 1rem;
    margin: 0.5rem 0;
    color: #3b4c35;
 }
-
 
 .service-card .service-description {
    display: none;
@@ -198,10 +181,10 @@ body {
    justify-content: center;
    align-items: center;
    position: absolute;
-   bottom: 5%; /* Moved higher on the card */
+   bottom: 5%; 
    left: 50%;
    transform: translate(-50%, 0);
-   color: #e9e0d7; /* Lighter text color */
+   color: #e9e0d7; 
    font-size: 1rem;
    padding: 0.5rem 1rem;
    opacity: 0;
@@ -253,7 +236,7 @@ body {
 
 .slide.text {
 font-size: 2rem;
-  font-family: 'Libre Baskerville', serif; /* Apply Libre Baskerville font */
+  font-family: 'Libre Baskerville', serif;
 }
 
 
@@ -298,7 +281,7 @@ font-size: 2rem;
   border: none;
   padding: 10px 20px;
   font-size: 1rem;
-  font-family: 'Libre Baskerville', serif; /* Apply Libre Baskerville font */
+  font-family: 'Libre Baskerville', serif; 
   cursor: pointer;
   border-radius: 2px;
   transition: background-color 0.3s ease;
@@ -309,19 +292,19 @@ font-size: 2rem;
   background-color: #5c635a;
 }
 .learn-your-skin-type-title {
-  color: #413733; /* Change to any color you prefer */
+  color: #413733; 
   font-family: 'Libre Baskerville', serif;
   font-size: 2rem;
   font-weight: 700;
-  text-align: center; /* Center the title */
+  text-align: center; 
   margin-bottom: 20px;
 }
 
 
 .conclusion {
-color: #413733; /* Change to any color you prefer */
+color: #413733; 
   font-family: 'Libre Baskerville', serif;
   font-size: 1rem;
-  text-align: center; /* Center the title */
+  text-align: center; 
   margin-bottom: 5px;}
 
