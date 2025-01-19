@@ -15,6 +15,10 @@ The website consists of six main pages:
 
 This project combines both front-end and back-end development to deliver an interactive and reliable booking experience.
 
+## Demo
+
+![Website Screenshot](spa-website/src/spa-website-img.png)
+
 ## Features
 
 ### Front-End
